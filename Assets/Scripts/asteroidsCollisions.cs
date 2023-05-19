@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class collider : MonoBehaviour
+public class asteroidsCollisions : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
-        {
-            Destroy(other.gameObject);
-            //Destroy(gameObject);
-        }
+        Destroy(other.gameObject);
     }
 }
