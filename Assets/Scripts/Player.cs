@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     /* GAME'S FEATURES */
     public float moveSpeed = 10.0f;
-    public float sideLimits = 2.6f;
+    public float sideLimits = 5.0f;
     public TextMeshProUGUI text;
 
     /* PLAYER'S FEATURES */

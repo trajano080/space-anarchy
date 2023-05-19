@@ -171,7 +171,7 @@ MonoBehaviour:
   - {fileID: 1677926019}
   - {fileID: 706635682}
   - {fileID: 836864569}
-  player: {fileID: 113234336}
+  player: {fileID: 113234340}
   position0: {x: 0, y: 1, z: 40}
 --- !u!1 &69934778
 GameObject:
@@ -269,7 +269,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &113234336
+--- !u!114 &113234340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  sideLimits: 2.6
+  sideLimits: 5
   text: {fileID: 356953541}
 --- !u!1001 &136768510
 PrefabInstance:
@@ -608,7 +608,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 33.125988
+  field of view: 33.860867
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -633,14 +633,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563600969}
-  m_LocalRotation: {x: 0.26108882, y: -0.20517313, z: -0.056336507, w: 0.9415747}
-  m_LocalPosition: {x: 4.07, y: 6.53, z: -6.22}
+  m_LocalRotation: {x: 0.27192286, y: -0, z: -0, w: 0.96231914}
+  m_LocalPosition: {x: 0, y: 7.5, z: -8.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 27.94, y: -28.077, z: -13.967}
+  m_LocalEulerAnglesHint: {x: 31.557, y: 0, z: 0}
 --- !u!1 &579521996
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +999,7 @@ CapsuleCollider:
   m_Height: 2.6509068
   m_Direction: 1
   m_Center: {x: 0.18410891, y: -0.106006384, z: -0.046618104}
---- !u!114 &706635688
+--- !u!114 &706635692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1031,7 +1031,7 @@ CapsuleCollider:
   m_Height: 3.5244265
   m_Direction: 1
   m_Center: {x: -0.0876385, y: 0.0077008605, z: -0.07396954}
---- !u!114 &836864575
+--- !u!114 &836864579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1204,7 +1204,7 @@ CapsuleCollider:
   m_Height: 1.7191368
   m_Direction: 1
   m_Center: {x: 0.044809222, y: -0.03537506, z: 0.048307836}
---- !u!114 &1677926033
+--- !u!114 &1677926037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -6,7 +6,7 @@ public class Asteroids : MonoBehaviour
 {
     public GameObject[] asteroidsArray = new GameObject[3];
     public Player player;
-    private float asteroidSpeed = 10f;
+    private float asteroidSpeed = 15f;
     private float asteroidLimit = 6.0f;
     public Vector3 position0 = new Vector3(0.0f, 1.0f, 40.0f);
 
