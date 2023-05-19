@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class playerControls : MonoBehaviour
 {
-    public float moveSpeed = 10.0f;
-    public float sideLimits = 2.6f;
+    private float moveSpeed = 10.0f;
+    private float sideLimits = 2.6f;
     void Update()
     {
         if (Input.GetKey(KeyCode.A) && (transform.position.x >= -sideLimits))

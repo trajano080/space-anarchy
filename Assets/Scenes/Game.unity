@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.50272095, b: 0.369571, a: 0.7176471}
+  m_Color: {r: 0.015528024, g: 0, b: 0.23584908, a: 0.68235296}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialLives: 3
   currentLives: 0
-  textLives: {fileID: 356953539}
+  text: {fileID: 356953541}
 --- !u!1 &356953539
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 356953542}
   - component: {fileID: 356953541}
   m_Layer: 5
-  m_Name: livesDisplay
+  m_Name: infoDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lives: 3'
+  m_text: 'Score: 0 / Lives: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 93368250
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 20.244675, y: 0, z: 21.690704, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -964,6 +964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1513a83123e6e448aca2a38117f9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 113234336}
 --- !u!136 &1677926025
 CapsuleCollider:
   m_ObjectHideFlags: 0
