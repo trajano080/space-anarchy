@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI text;
 
     /* PLAYER'S FEATURES */
+    public GameObject laser;
+
     private int initialLives = 3;
     private static int score;
     private static int currentLives;
@@ -32,6 +34,14 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.D) && (transform.position.x <= sideLimits))
         {
             transform.Translate(Vector3.right * Time.deltaTime * moveSpeed, Space.World);
+        }
+
+        /* PLAYER'S LASER */
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject newlaser = Instantiate(laser);
+            newlaser.transform.position = transform.position;
+            newlaser.AddComponent<Laser>();
         }
 
         /* PLAYER'S LOSE CONDITION */
