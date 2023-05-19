@@ -5,20 +5,36 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+    /* GAME'S FEATURES */
+    public float moveSpeed = 10.0f;
+    public float sideLimits = 5.0f;
+    public TextMeshProUGUI text;
+
+    /* PLAYER'S FEATURES */
     private int initialLives = 3;
+    private static int score;
     private static int currentLives;
 
-    private static int score;
-    public TextMeshProUGUI text;
     void Start()
     {
         currentLives = initialLives;
         score = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        /* PLAYER'S CONTROLS */
+        if (Input.GetKey(KeyCode.A) && (transform.position.x >= -sideLimits))
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * moveSpeed, Space.World);
+        }
+
+        if (Input.GetKey(KeyCode.D) && (transform.position.x <= sideLimits))
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * moveSpeed, Space.World);
+        }
+
+        /* PLAYER'S LOSE CONDITION */
         text.GetComponentInChildren<TextMeshProUGUI>().text = "Score: " + score + " / Lives: " + currentLives;
         if (currentLives <= 0)
         {
