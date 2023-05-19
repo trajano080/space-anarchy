@@ -213,8 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a47969b50a971d4e9dd6b88e886455e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  sideLimits: 2.6
 --- !u!143 &113234332
 CharacterController:
   m_ObjectHideFlags: 0
@@ -245,8 +243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ef1023c52e95846b645e32d02a4f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialLives: 3
-  currentLives: 0
   text: {fileID: 356953541}
 --- !u!1 &356953539
 GameObject:
@@ -281,9 +277,9 @@ RectTransform:
   m_Father: {fileID: 579522000}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 853.71, y: 405.47}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -250, y: -60}
   m_SizeDelta: {x: 480, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356953541
@@ -340,7 +336,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -369,7 +365,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 20.244675, y: 0, z: 21.690704, w: 0}
+  m_margin: {x: -0.00000011453338, y: 0, z: 21.690704, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -952,19 +948,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: c0ed7b603a877f3438855e13ce52a141, type: 3}
   m_PrefabInstance: {fileID: 657843788}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1677926023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677926019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed1513a83123e6e448aca2a38117f9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 113234336}
 --- !u!136 &1677926025
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -991,6 +974,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18975292c472bcd4896f0b3245fdf6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidSpeed: 10
-  asteroidLimit: 6
-  position0: {x: 0, y: 1, z: 40}
+  player: {fileID: 113234336}
