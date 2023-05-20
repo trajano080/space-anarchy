@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     {
         currentLives = initialLives;
         score = 0;
+        laser.SetActive(false);
     }
 
     void Update()
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
         {
             GameObject newlaser = Instantiate(laser);
             newlaser.transform.position = transform.position;
+            newlaser.SetActive(true);
             newlaser.AddComponent<Laser>();
         }
 
