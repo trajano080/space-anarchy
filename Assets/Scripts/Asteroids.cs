@@ -26,7 +26,6 @@ public class Asteroids : MonoBehaviour
         asteroid.transform.Translate(Vector3.back * Time.deltaTime * asteroidSpeed, Space.World);
         if (asteroid.transform.position.z <= -asteroidLimit)
         {
-            player.addScore();
             changeAsteroid();
         }
 
