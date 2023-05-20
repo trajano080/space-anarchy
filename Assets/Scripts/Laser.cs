@@ -13,7 +13,7 @@ public class Laser : MonoBehaviour
 
         if (transform.position.z >= laserLimit)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

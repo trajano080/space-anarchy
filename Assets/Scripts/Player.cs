@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             GameObject newlaser = Instantiate(laser);
-            newlaser.transform.position = transform.position;
+            newlaser.transform.position = new Vector3(transform.position.x, transform.position.y, 1.50f);
             newlaser.SetActive(true);
             newlaser.AddComponent<Laser>();
         }
