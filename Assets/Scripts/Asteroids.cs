@@ -41,9 +41,15 @@ public class Asteroids : MonoBehaviour
         asteroid.transform.position = position0;
     }
 
-    public void collision()
+    public void playerCollision()
     {
         player.loseLife();
+        changeAsteroid();
+    }
+
+    public void laserCollision()
+    {
+        player.addScore();
         changeAsteroid();
     }
 }

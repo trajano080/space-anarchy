@@ -7,6 +7,14 @@ public class AsteroidCollision : MonoBehaviour
     public Asteroids asteroids;
     void OnTriggerEnter(Collider other)
     {
-        asteroids.collision();
+        if (other.gameObject.tag == "Player")
+        {
+            asteroids.playerCollision();
+        }
+        else if (other.gameObject.tag == "Laser")
+        {
+            Destroy(other.gameObject);
+            asteroids.laserCollision();
+        }
     }
 }

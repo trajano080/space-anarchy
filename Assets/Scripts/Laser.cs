@@ -16,15 +16,4 @@ public class Laser : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(GetComponent<CapsuleCollider>().isTrigger);
-        //Debug.Log(other.gameObject.tag);
-        if (other.gameObject.tag == "Asteroid")
-        {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-        }
-    }
 }
