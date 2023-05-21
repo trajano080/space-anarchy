@@ -26,8 +26,15 @@ public class MainMenu : MonoBehaviour
     }
     void Update()
     {
-        username.text = "User: " + StaticVariables.activeUser;
-        highscore.text = "Highscore: " + StaticVariables.scores[StaticVariables.activeUser].ToString();
+        try
+        {
+            username.text = "User: " + StaticVariables.activeUser;
+            highscore.text = "Highscore: " + StaticVariables.scores[StaticVariables.activeUser].ToString();
+        }
+        catch
+        {
+
+        }
     }
     public void NewGame()
     {
