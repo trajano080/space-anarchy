@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class Player : MonoBehaviour
     public GameObject laser;
 
     private int initialLives = 3;
-    private static int score;
+    private int score;
     private static int currentLives;
 
     void Start()
@@ -50,7 +51,11 @@ public class Player : MonoBehaviour
         text.GetComponentInChildren<TextMeshProUGUI>().text = "Score: " + score + " / Lives: " + currentLives;
         if (currentLives <= 0)
         {
-            Destroy(gameObject);
+            if (score > StaticVariables.scores[StaticVariables.activeUser])
+            {
+                StaticVariables.scores[StaticVariables.activeUser] = score;
+            }
+            SceneManager.LoadScene(0);
         }
     }
 
