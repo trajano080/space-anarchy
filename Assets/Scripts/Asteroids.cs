@@ -5,7 +5,9 @@ using UnityEngine;
 public class Asteroids : MonoBehaviour
 {
     public GameObject asteroid;
-    public GameObject explotion;
+    public GameObject explosion;
+    private ParticleSystem.ColorOverLifetimeModule explotionColor;
+    private Gradient explosionGradient;
     public Player player;
     private float asteroidSpeed = 15f;
     private float asteroidLimit = 6.0f;
@@ -15,6 +17,9 @@ public class Asteroids : MonoBehaviour
     {
         position0.x = (float)UnityEngine.Random.Range(-player.sideLimits, player.sideLimits);
         asteroid.transform.Translate(position0);
+
+        explotionColor = explosion.GetComponent<ParticleSystem>().colorOverLifetime;
+        explosionGradient = explosion.GetComponent<ParticleSystem>().colorOverLifetime.color.gradient;
     }
 
     void Update()
@@ -36,23 +41,26 @@ public class Asteroids : MonoBehaviour
         asteroid.transform.Rotate(Vector3.forward, (float)UnityEngine.Random.Range(0, 90));
     }
 
-    void playExplotion()
+    void playExplosion()
     {
-        explotion.transform.position = asteroid.transform.position;
-        explotion.transform.rotation = asteroid.transform.rotation;
-        explotion.GetComponent<ParticleSystem>().Play();
+        explosion.transform.position = asteroid.transform.position;
+        explosion.transform.rotation = asteroid.transform.rotation;
+        explosion.GetComponent<ParticleSystem>().Play();
     }
 
     public void playerCollision()
     {
         player.loseLife();
+        explotionColor.color = explosionGradient.colorKeys[0].color;
+        playExplosion();
         changeAsteroid();
     }
 
     public void laserCollision()
     {
         player.addScore();
-        playExplotion();
+        explotionColor.color = explosionGradient.colorKeys[1].color;
+        playExplosion();
         changeAsteroid();
     }
 }
