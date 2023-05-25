@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class Asteroids : MonoBehaviour
 {
-    public GameObject[] asteroidsArray = new GameObject[3];
+    public GameObject asteroid;
+
     public Player player;
     private float asteroidSpeed = 15f;
     private float asteroidLimit = 6.0f;
     public Vector3 position0 = new Vector3(0.0f, 1.0f, 40.0f);
 
-    private GameObject asteroid;
     void Start()
     {
-        asteroid = asteroidsArray[0];
-        asteroidsArray[1].SetActive(false);
-        asteroidsArray[2].SetActive(false);
-
         position0.x = (float)UnityEngine.Random.Range(-player.sideLimits, player.sideLimits);
         asteroid.transform.Translate(position0);
     }
@@ -34,10 +30,11 @@ public class Asteroids : MonoBehaviour
     void changeAsteroid()
     {
         position0.x = (float)UnityEngine.Random.Range(-player.sideLimits, player.sideLimits);
-        asteroid.SetActive(false);
-        asteroid = asteroidsArray[UnityEngine.Random.Range(0, 3)];
-        asteroid.gameObject.SetActive(true);
         asteroid.transform.position = position0;
+        asteroid.transform.Rotate(Vector3.right, (float)UnityEngine.Random.Range(0, 90));
+        asteroid.transform.Rotate(Vector3.up, (float)UnityEngine.Random.Range(0, 90));
+        asteroid.transform.Rotate(Vector3.forward, (float)UnityEngine.Random.Range(0, 90));
+        asteroid.gameObject.SetActive(true);
     }
 
     public void playerCollision()
