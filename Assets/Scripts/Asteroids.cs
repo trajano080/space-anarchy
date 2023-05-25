@@ -5,7 +5,7 @@ using UnityEngine;
 public class Asteroids : MonoBehaviour
 {
     public GameObject asteroid;
-
+    public GameObject explotion;
     public Player player;
     private float asteroidSpeed = 15f;
     private float asteroidLimit = 6.0f;
@@ -34,7 +34,13 @@ public class Asteroids : MonoBehaviour
         asteroid.transform.Rotate(Vector3.right, (float)UnityEngine.Random.Range(0, 90));
         asteroid.transform.Rotate(Vector3.up, (float)UnityEngine.Random.Range(0, 90));
         asteroid.transform.Rotate(Vector3.forward, (float)UnityEngine.Random.Range(0, 90));
-        asteroid.gameObject.SetActive(true);
+    }
+
+    void playExplotion()
+    {
+        explotion.transform.position = asteroid.transform.position;
+        explotion.transform.rotation = asteroid.transform.rotation;
+        explotion.GetComponent<ParticleSystem>().Play();
     }
 
     public void playerCollision()
@@ -46,6 +52,7 @@ public class Asteroids : MonoBehaviour
     public void laserCollision()
     {
         player.addScore();
+        playExplotion();
         changeAsteroid();
     }
 }
